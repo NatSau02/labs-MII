@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from random import randint as ri
 try:
     print("Input N")
@@ -68,6 +69,7 @@ try:
         print(c)
         print("Matrix B")
         print(b)
+
     print("Matrix F \n",f)
     det=np.linalg.det(a)
     print("The determinant of the matrix A \n",det)
@@ -89,5 +91,30 @@ try:
         print("The inverse matrix G \n", gInv)
         ans=(aT+gInv-fInv)*k
         print("The final answer \n", ans)
+
+    print("Plotting")
+    size = len(e) * len(e[0])
+    x = np.linspace(0, size, size)
+    y = np.asarray(e).reshape(-1)
+    plt.plot(x, y, color="red")
+    plt.title("Matrix E")
+    plt.show()
+
+
+    size = len(d) * len(d[0])
+    x = np.linspace(0, size, size)
+    y = np.asarray(d).reshape(-1)
+    plt.plot(x, y,"o")
+    plt.title("Matrix D")
+    plt.show()
+
+
+    size = len(f) * len(f[0])
+    x = np.linspace(0, size, size)
+    y = np.asarray(f).reshape(-1)
+    plt.plot(x, y)
+    plt.title("Matrix F")
+    plt.show()
+
 except Exception as exc:
         print(exc)
