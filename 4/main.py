@@ -1,3 +1,5 @@
+import csv
+
 import pandas as pd
 import numpy as np
 import pylab
@@ -134,24 +136,24 @@ def knn_sklearn(values,classes,k,test_sz):
 if __name__ == '__main__':
     data = [['продукт', 'сладость', 'хруст', 'класс'],
         ['Apple', '7', '7', '0'],
-        ['Salad', '2', '5', '1'],
+        ['Salad', '2', '25', '1'],
         ['Bacon', '1', '2', '2'],
         ['Nuts', '1', '5', '2'],
         ['Fish', '1', '1', '2'],
         ['Cheese', '1', '1', '2'],
         ['Banana', '9', '1', '0'],
-        ['Carrot', '2', '8', '1'],
+        ['Carrot', '2', '29', '1'],
         ['Grape', '8', '1', '0'],
         ['Orange', '6', '1', '0'],
         ['Kiwifruit', '8', '1', '0'],
-        ['Potato', '1', '7', '1'],
+        ['Potato', '1', '27', '1'],
         ['Quark', '1', '4', '2'],
         ['Watermelon', '10', '5', '0'],
         ['Bean', '1', '5', '2'],
-        ['Cabbage', '2', '10', '1'],
-        ['Cucumber', '1', '9', '1'],
+        ['Cabbage', '2', '30', '1'],
+        ['Cucumber', '1', '19', '1'],
         ['Garnet', '7', '2', '0'],
-        ['Pumpkin', '4', '8', '1'],
+        ['Pumpkin', '2', '28', '1'],
         ['Meat', '1', '1', '2'],
         ]
 
@@ -164,10 +166,11 @@ if __name__ == '__main__':
     print(data)
 
     #knn
+    print('knn with old data')
 
-    k_max=6
+    k_max=8
 
-    window=2
+    window=4
 
     er_k , classes = knn(data[0:11],data[11:],k_max,window,3)
 
@@ -186,6 +189,8 @@ if __name__ == '__main__':
     classes_info = dataset['класс']
 
     print_result(k_max,er_k,sweet,crunch,start_data,colours,classes_info)
+
+    print('sklearn knn with old data')
 
     k_max = 5
 
@@ -240,6 +245,7 @@ if __name__ == '__main__':
 
     print_result(k_max, er_k, sweet, crunch, start_data, colours, classes_info)
 
+    print('knn with new data')
 
     new_data = data[0:11]
     new_data.append(['Cookies', '15', '4', '3'])
@@ -283,12 +289,13 @@ if __name__ == '__main__':
 
     print_result(k_max, er_k, sweet, crunch, start_data, colours, classes_info)
 
+    print('sklearn knn with new data')
 
     k_max = 10
 
     my_dataset = pd.read_csv('data.csv')
-    sweetness = my_dataset['ссладоссть']
-    crunch = my_dataset['хрусст']
+    sweetness = my_dataset['сладость']
+    crunch = my_dataset['хруст']
 
     values = np.array(list(zip(sweetness, crunch)), dtype=np.float64)
 
