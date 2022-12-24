@@ -62,6 +62,8 @@
 
 
 ![screen_1.png](img/img_11.png)
+
+
 ![screen_1.png](img/img_12.png)
 
 График:
