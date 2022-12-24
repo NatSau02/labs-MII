@@ -32,6 +32,8 @@
 
 
 ![screen_1.png](img/img_4.png)
+
+
 ![screen_1.png](img/img_5.png)
 
 
@@ -43,6 +45,8 @@
 * Метод опорных векторов
 
 ![screen_1.png](img/img_7.png)
+
+
 ![screen_1.png](img/img_8.png)
 
 
@@ -55,6 +59,8 @@
 
 
 ![screen_1.png](img/img_10.png)
+
+
 ![screen_1.png](img/img_11.png)
 ![screen_1.png](img/img_12.png)
 
