@@ -10,6 +10,7 @@
 3. Для обучения взяты все признаки
 4. Справка по бд, ее атрибутам и классам дана в файле <em> letter-recognition.names </em>
 5. Информация по данным:
+
 ![screen_1.png](img/img_1.png)
 
 6. Выделим из бд материал для обучающей и тестовой выборок:
@@ -28,20 +29,31 @@
 
 8. Анализ результатов:
 * Наивный байесовкий классификатор
+
+
 ![screen_1.png](img/img_4.png)
 ![screen_1.png](img/img_5.png)
 
+
 График:
+
 ![screen_1.png](img/img_6.png)
+
+
 * Метод опорных векторов
+
 ![screen_1.png](img/img_7.png)
 ![screen_1.png](img/img_8.png)
 
+
 График:
+
 
 ![screen_1.png](img/img_9.png)
 
 * Метод ближайших соседей
+
+
 ![screen_1.png](img/img_10.png)
 ![screen_1.png](img/img_11.png)
 ![screen_1.png](img/img_12.png)
